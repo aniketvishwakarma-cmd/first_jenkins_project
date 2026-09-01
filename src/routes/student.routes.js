@@ -10,6 +10,13 @@ const {
 
 const router = express.Router();
 
+router.get("/test", (req, res) => {
+    res.json({
+        success: true,
+        message: "Student route working"
+    });
+});
+
 router.post("/", createStudent);
 router.get("/", getStudents);
 router.get("/:id", getStudent);
